@@ -1,0 +1,1010 @@
+/* Table of content
+1.General - This is created general styles and overide some bootstrap classes.
+2.Layout
+ 2.1 Animations
+ 2.2 Buttons
+ 2.3 Thumbnail - overide bootstrap thumbnail and add mased effect
+ 2.4 Social icons -style for social icons list
+3 Sections - definition for section and subsection
+ 3.1 Why Tutio
+ 3.2 Requirements
+ 3.3 How it works
+ 3.4 Pricing
+ 3.5 Home
+ 3.6 Footer
+4 Responsive 
+**********************************************************************/
+
+/*
+1. General
+**********************************************************************/
+ body {
+    font-family:'Lato', sans-serif;
+    color: #FFF;
+    line-height:1.2em;
+    font-size:17px;
+    line-height:20px;
+    font-weight:400;
+}
+a {
+    color:#181A1C;
+    text-decoration: none;
+}
+a:hover {
+    color: #FECE1A;
+    text-decoration:none;
+}
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  color: #FFF !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+h1 {
+    margin: 10px;
+}
+p {
+    padding: 10px;
+    font-weight: 300;
+    color: #222;
+    line-height: 1.7em;
+    font-size: 19px;
+}
+.navbar {
+    background: #35596D;
+    margin-bottom:0;
+    min-height:75px;
+}
+
+.navbar-fixed-top {
+    min-height:60px;
+    height:60px;
+    padding-top:0;
+}
+.navbar-inner {
+    background: #35596D;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -khtml-border-radius: 0;
+    filter: none;
+    border: none;
+    box-shadow: none;
+}
+.navbar .brand img {
+    width:80px;
+    height:56px;
+}
+.navbar .nav {
+    margin: 10px 10px 0 0;
+}
+.navbar .nav > li > a,
+.navbar .nav > li > span {
+    line-height: auto;
+    vertical-align: middle;
+    margin:10px 0px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    color: #fff;
+    transition: color 1s ease;
+    font-size: 18px;
+    font-weight: 300;
+}
+.navbar .nav > li > span {
+  float: none;
+  padding: 10px 8px 10px;
+  color: #4D6A7B;
+  text-decoration: none;
+  display: block;
+}
+.navbar .nav > li:hover> a, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+    color: #fab243;
+    transition: color 1s ease;
+    background-color: transparent !important;
+    -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+.navbar .btn-navbar:hover, .navbar .btn-navbar {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -khtml-border-radius: 0;
+    background:#fab243;
+    color: #35596D;
+}
+.navbar input[type="search"] {
+    border: 1px solid #728B99;
+    background: none;
+    color: #FFF;
+    font-style: italic;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -khtml-border-radius: 0;
+    width: 100%;
+    height: 28px;
+    font-size: 16px;
+    text-indent: 10px;
+    border-right: 0;
+    float: left;
+}
+.navbar input[type="submit"] {
+    background: transparent url("../images/search.gif") no-repeat top left;
+    width: 48px;
+    height: 38px;
+    border: 1px solid #728B99;
+    border-left: 0;
+    position: absolute;
+    right: -14px;
+    
+}
+.navbar form { float: left; position: relative; margin-left: 2%; position: relative; top: 23px; width: 22%; }
+
+/******
+2. Layout
+**********************************************************************/
+.centered {
+    margin-left:auto;
+    margin-right:auto;
+    float: none;
+    text-align: center;
+}
+/* Use this class if you want ceter element with span* class */
+ .center {
+    float: none !important;
+    margin: 0 auto !important;
+    text-align: center;
+}
+.highlighted-box {
+    background:#F4F8F9;
+    padding:20px 30px;
+}
+.highlighted-box h1 {
+    margin:0px;
+}
+.large-text {
+    line-height:1.2em;
+    font-size: 30px;
+    color: #181A1C;
+    padding:20px;
+    margin-bottom:20px;
+}
+.highlighted-box h1, .highlighted-box p {
+    color: #181A1C !important;
+}
+.circle-border {
+    display: inline-block;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    border-radius: 500px;
+    -khtml-border-radius: 500px;
+    border: 3px solid #fff;
+}
+.left-align {
+    text-align:left;
+}
+.right-align {
+    text-align:left;
+}
+.error {
+    color: #CF0000;
+    display: none;
+}
+.invisible {
+    display:none;
+    visibility:visible;
+}
+.triangle {
+    margin: 0 auto;
+    text-align:center;
+    width: 91px;
+    height: 25px;
+    border-top: 0px solid #FFF;
+    border-left: 0px outset transparent;
+    border-right: 0px outset transparent;
+    position: relative;
+    background: url('../images/arrow.png') no-repeat top left;
+}
+.da-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+  border: 1px solid red;
+}
+.da-slide-current .da-img {
+  left: 0 !important;
+  opacity: 1;
+}
+.da-slide .da-img {
+  text-align: center;
+  width: 100% !important;
+  top: 0;
+  height: 256px;
+  line-height: 360px;
+  left: 110%;
+  border: 1px solid blue;
+}
+
+/*
+2.1 Animations
+**********/
+
+.bx-wrapper img { width: auto !important; height: auto !important;}
+.bx-wrapper .bx-viewport { left: 0 !important; }
+
+ .zoom-in {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.zoom-in:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+}
+/*
+2.2 Buttons - There are buttons on a transparent background, primary and secondary color background.
+**********/
+ .button,  .button:visited, .button:focus {
+    display:inline-block;
+    border:1px solid #181A1C;
+    color:#181A1C;
+    background-color:transparent;
+    padding:10px 25px;
+    font-size:17px;
+    line-height:auto;
+}
+.button:hover, .button:active{
+    background-color:#181A1C;
+    color:#fff;
+}
+.button-sp, .button-sp:visited, .button-sp:focus {
+    border:none;
+    background-color:#FECE1A;
+    color:#181A1C;
+}
+.button-sp:hover, .button-sp:active {
+    background-color:#181A1C;
+    color:#FECE1A;
+}
+.button-ps, .button-ps:visited, .button-ps:focus {
+    border:none;
+    background-color:#2B5166;
+    color:#FFF;
+    border-bottom:3px solid #1A3544;
+    font: 700 13px Lato;
+    letter-spacing: 0.08em;
+}
+.button-ps:hover, .button-ps:active,
+.button-ps-invert, .button-ps-invert:visited, .button-ps-invert:focus {
+    background-color:#FAB243;
+    color:#271325;
+    border-bottom-color: #D0953A;
+}
+.button-ps-invert:hover, .button-ps-invert:active {
+    border:none;
+    background-color:#2B5166;
+    color:#FFF;
+    border-bottom:3px solid #1A3544;
+    font: 700 13px Lato;
+    letter-spacing: 0.08em;
+}
+
+/*
+2.3 Thumbnails - Predefined bootstrap's thumbnail class.
+**********/
+.thumbnails { background: url("../images/why-tutio.gif") no-repeat center top; padding-bottom: 40px; }
+ .thumbnail {
+    width:100%;
+    padding:0;
+    overflow: hidden;
+    position: relative;
+    border:0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -khtml-border-radius: 0;
+    box-shadow:none;
+    text-align:center;
+}
+.teacher-tracking img { margin:7% 0 0 19%; float: left; }
+.flexibility img {margin: 20% 20% 0 0; float: right;}
+.live-tutor-interaction img { margin: 24% 0 0 20%; float: left; }
+.find-right-educator img { margin: 26% 20% 0 0; float: right; }
+.flexibility div,
+.find-right-educator div { float: left; }
+.teacher-tracking div,
+.live-tutor-interaction div { float: right; }
+
+.flexibility div { margin-top: 16%; }
+.live-tutor-interaction div { margin-top: 23%; }
+.find-right-educator div { margin-top: 17%;}
+
+.thumbnail img { 
+    -webkit-border-radius: 235px;
+    -moz-border-radius: 235px; 
+    border-radius: 235px; 
+    -webkit-box-shadow: inset 10px 12px 76px 0px rgba(127,127,127,0.75);
+    -moz-box-shadow: inset 10px 12px 76px 0px rgba(127,127,127,0.75);
+    box-shadow: inset 10px 12px 76px 0px rgba(127,127,127,0.75);
+}
+.thumbnail .copy {
+    text-align: left;
+    width: 49%;
+}
+.thumbnail .copy h3 {color: #271325; font: 34px Handlee;}
+.thumbnail .copy h3 span { font: 300 22px Lato; font-style: italic; color: #222; }
+.secondary-section#why-tutio .thumbnail .copy p {width: 80%; text-align: left; color: #222; text-align: left !Important; margin: 0 !Important; font-size: 18px; line-height: 2em; padding-top: 25px; }
+
+.thumbnail .more {
+    display:block;
+    z-index:4;
+    position:absolute;
+    top:-100px;
+    left:50%;
+    margin:0 auto;
+    margin-left:-41px;
+    width:80px;
+    height:80px;
+    font-size:40px;
+    color:#fff;
+    text-decoration:none;
+    line-height: 70px;
+    text-align: center;
+}
+.thumbnail:hover .more {
+    top:40%;
+    margin-top:-40px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3 s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.thumbnail h3, 
+.thumbnail p {
+    margin:0;
+    padding:0;
+    position:relative;
+    z-index:4;
+}
+.thumbnail h3 {
+    color: #FECE1A;
+    margin-top:10px;
+    font-size:20px;
+}
+.thumbnail > p {
+    padding-bottom:20px;
+}
+.thumbnail .mask {
+    opacity:0.85;
+    filter: alpha(opacity=85);
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#181A1C;
+    position:absolute;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2 s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.thumbnail:hover .mask {
+    top:0;
+}
+/*
+2.4 Socail icons
+************/
+ .social {
+    list-style: none;
+    float: none;
+    position:relative;
+    margin:5px; auto;
+}
+.social li {
+    display:inline-block;
+    line-height: 32px;
+    font-family:'Porta';
+    font-size: 32px;
+    padding:0 5px;
+}
+.social li a {
+    margin:0;
+    padding:0;
+    width:32px;
+    height:32px;
+    color: #FECE1A;
+}
+.social li a:hover {
+    color:#181A1C;
+}
+/*
+3. Sections 
+***************************************************************************/
+ .section {
+    padding-bottom: 50px;
+}
+.section .container {
+    padding-top:50px;
+}
+.section .title {
+    text-align: left;
+    padding:10px;
+    margin-bottom: 15px;
+}
+.section .title h1 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding: 0;
+}
+.section .title > p {
+    font-size: 18px;
+    color: #FFF;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+.primary-section {
+    background:#35596D;
+}
+.primary-section .brand {float: left; margin-right: 5%; width: 40%; margin-bottom: 20px; }
+
+.primary-section, .primary-section .title p, .primary-section h3 {
+    color: #FFF;
+}
+.primary-section h1 {
+    color:#FFF;
+}
+.secondary-section {
+    background:#FFF;
+}
+.secondary-section h1, .secondary-section .title p {
+    color: #181A1C;
+}
+/* Third section use bacground image */
+.third-section {
+    padding-bottom: 70px;
+    background: #181A1C url(../images/brand-bg.png) no-repeat center;
+    border-top:6px solid #FECE1A;
+}
+.third-section .container {
+    padding-top:20px;
+    position:relative;
+}
+.third-section .title {
+    border-bottom: 1px solid #A1AAB7;
+    color: #FECE1A;
+}
+.sub-section {
+    margin-top:30px;
+}
+.sub-section .title {
+    padding:0;
+}
+
+/*
+3.1 Why Tutio
+***************************************/
+.handlee { font-family: "handlee";}
+.lato { font-family: "lato"; }
+.title.handlee h1 { font-size: 58px; text-align: center; }
+.title.handlee p { font: bold 18px Lato; text-transform: uppercase; text-align: center; letter-spacing: 0.07em}
+.secondary-section#why-tutio p {text-align: center; width: 70%; margin: 0 auto; margin-bottom: 100px; }
+.secondary-section#why-tutio .title.handlee p {margin-bottom: 0;}
+
+.close {
+    float: right;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+/*
+3.2 Requirements
+******************************************************************/
+#requirements { background: #E1E6E9 url("../images/reqs-bg.gif") no-repeat center 20%; color: #222; min-height: 450px; }
+#requirements .title.handlee h1 { color: #271325; }
+#requirements .title.handlee p { color: #222; text-transform: none; font: italic 400 1.1em Lato; }
+
+.reqs-text {
+    margin: 30px auto 30px;
+    list-style: none;
+    font: 300 22px Lato;
+    width: 100%;
+    text-align: center;
+}
+.reqs-text li { display: inline-block; background: url("../images/divider.png") no-repeat left top; height: 222px; padding: 0 2% 0 4%; }
+.reqs-text li:first-child { background: none; }
+.reqs-text li span { display: block; width: 82px; height: 66px; max-width: 82px; max-height: 66px; background: url("../images/icons.png") no-repeat top left; margin: 40px auto 40px; }
+.reqs-text li.camera span { background-position: top left; }
+.reqs-text li.microphone span { background-position: 0 -66px; }
+.reqs-text li.internet span { background-position: 0 -132px; }
+.reqs-text li.payment span { background-position: 0 -198px; }
+.reqs-text li.computer span { background-position: 0 -264px; }
+
+/*
+3.3 How it works
+**********************************************************************/
+#how-it-works .primary-section { background: #FFF url("../images/how-it-works.jpg") no-repeat center bottom; min-height: 1085px; color: #222; }
+#how-it-works .title.handlee h1 { color: #271325; }
+
+.for-students, .for-tutors { width: 270px; padding-bottom: 40px; position: relative; }
+.for-students {
+    left: 10%;
+    margin-top: 20%;
+    background: #fcddac; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZGRhYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjglIiBzdG9wLWNvbG9yPSIjZjRkNmE3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDAlIiBzdG9wLWNvbG9yPSIjZjlmMGUyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjklIiBzdG9wLWNvbG9yPSIjZmZlNGJhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y1YzY3ZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top,  #fcddac 0%, #f4d6a7 8%, #f9f0e2 40%, #ffe4ba 69%, #f5c67d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcddac), color-stop(8%,#f4d6a7), color-stop(40%,#f9f0e2), color-stop(69%,#ffe4ba), color-stop(100%,#f5c67d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fcddac 0%,#f4d6a7 8%,#f9f0e2 40%,#ffe4ba 69%,#f5c67d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fcddac 0%,#f4d6a7 8%,#f9f0e2 40%,#ffe4ba 69%,#f5c67d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcddac 0%,#f4d6a7 8%,#f9f0e2 40%,#ffe4ba 69%,#f5c67d 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fcddac 0%,#f4d6a7 8%,#f9f0e2 40%,#ffe4ba 69%,#f5c67d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcddac', endColorstr='#f5c67d',GradientType=0 ); /* IE6-8 */
+}
+.for-tutors {
+    right: 10%;
+    background: #c5d7e1; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M1ZDdlMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjglIiBzdG9wLWNvbG9yPSIjYjZjZWRjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDIlIiBzdG9wLWNvbG9yPSIjZDBkZWU1IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjZTFlNmU4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Q4ZDhkNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(top,  #c5d7e1 0%, #b6cedc 8%, #d0dee5 42%, #e1e6e8 70%, #d8d8d7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5d7e1), color-stop(8%,#b6cedc), color-stop(42%,#d0dee5), color-stop(70%,#e1e6e8), color-stop(100%,#d8d8d7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #c5d7e1 0%,#b6cedc 8%,#d0dee5 42%,#e1e6e8 70%,#d8d8d7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #c5d7e1 0%,#b6cedc 8%,#d0dee5 42%,#e1e6e8 70%,#d8d8d7 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #c5d7e1 0%,#b6cedc 8%,#d0dee5 42%,#e1e6e8 70%,#d8d8d7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #c5d7e1 0%,#b6cedc 8%,#d0dee5 42%,#e1e6e8 70%,#d8d8d7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5d7e1', endColorstr='#d8d8d7',GradientType=0 ); /* IE6-8 */
+}
+#how-it-works .primary-section h3 {
+    color: #271325;
+    text-align: center;
+    font: 33px Handlee;
+    padding: 20px 0;
+    margin-top: 0
+}
+#how-it-works .primary-section .for-students h3 { background: #FCDDAC; }
+#how-it-works .primary-section .for-tutors h3 { background: #C5D7E1; }
+
+.for-students ul, .for-tutors ul { margin: 0; }
+.for-students li, .for-tutors li {
+    list-style: none;
+    font: 300 21px Lato;
+    text-align: center;
+    line-height: 2em;
+    padding: 30px 20px 30px;
+    background: url("../images/arrow-bottom.png") no-repeat center top;
+}
+
+.for-students li:first-child, .for-tutors li:first-child { background: none; }
+
+/*
+3.4 Pricing
+******************************************************************/
+#pricing { background: url("../images/pricing.jpg") no-repeat center bottom; background-size: 100%; max-height: 856px; }
+#pricing .span2 { width: 18%; }
+#pricing .row-fluid [class*="span"] {margin-left: 1%;}
+#pricing .row-fluid .offset1 {margin-left: 3%;}
+
+#pricing .title.lato h1 { margin-top: 250px; margin-bottom: 0; text-align: center; font: 900 70px Lato; text-transform: uppercase; color: #271325; }
+#pricing .title { margin-bottom: 0; }
+.price-table {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.price-column {
+    background-color:white;
+    padding-bottom:20px;
+    margin:0 auto;
+    text-align:center;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+}
+.price-column h3 {
+    background-color:#271325;
+    text-transform:uppercase;
+    text-align: center;
+    color:#FFF;
+    padding:23px 0px;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    margin:0px;
+    line-height: 1em;
+}
+.price-column .list{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.price-column .list li{
+    font-weight:lighter;
+    color:#1d0e1b;
+    font-size:18px;
+    font-weight: 300;
+    border-bottom:1px dashed #0A0A0A;
+    padding:0;
+    line-height: 3.2em;
+}
+.price-column .list li.price {
+    font-size:20px;
+    background-color:#FDDFB2;
+    font-weight: 700;
+    line-height: 2.5em;
+}
+.price-column .button-ps { margin-top: 23px; text-transform: uppercase; }
+.price-column.recommended { margin-top: -30px; }
+.price-column li.recommended { background: #FBC87A; color: #271325; font: 700 13px Lato; letter-spacing: 0.08em; border-bottom: 0; text-transform: uppercase; height: 30px; line-height: 2.35em; }
+.price-column.recommended .button-ps { margin: 34px auto 10px; font: 900 16px Lato; letter-spacing: 0.05em; padding: 13px 20px; }
+
+/*
+3.5 Home
+********************************************************************/
+#home { position: relative;}
+#home h1.title {
+    position: absolute;
+    top: 15.7%;
+    left: 21%;
+    width: 28.4%;
+    color: #FFF;
+    z-index: 99;
+    text-align: center;
+    font-size: 23px;
+}
+#home h1.title .online { border: 1px solid #FFF; border-width: 1px 0; text-transform: uppercase; font: 900 1em Lato; letter-spacing: 0.2em; padding: 5px 0; }
+#home h1.title .handlee { display: block; font-size: 6.52em; margin-top: 0.48em; }
+#home h1.title .desc { font: 300 1.39em Lato; line-height: 1.4em; font-style: italic; display: block; margin-top: 3em; }
+
+#home form.search-big {
+    position: absolute;
+    z-index: 99;
+    width: 44%;
+    left: 27%;
+    top: 67%;
+}
+#home form.search-big input[type="search"]{
+    background: #FFF;
+    width: 100%;
+    height: 2.5em;
+    font: 400 24px Lato;
+    font-style: italic;
+    text-indent: 0.83em;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -khtml-border-radius: 0;
+    border: 0;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+#home form.search-big input[type="submit"]{
+    background: #FFF url("../images/search-big.gif") no-repeat top left;
+    width: 64px;
+    height: 60px;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/*
+3.6 Footer
+********************************************************************/
+ .footer {
+    background: #1D0E1B;
+    text-align: center;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer div {
+    color: #fff;
+    line-height: 4em;
+}
+.footer a { color: #FFF; }
+.footer div span { display: inline-block; margin: 0 20px; }
+
+.scrollup {
+    text-align:center;
+    cursor:pointer;
+    vertical-align:middle;
+    width:39px;
+    height:39px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    font-size:20px;
+    position:fixed;
+    bottom:30px;
+    right:20px;
+    border:1px solid #fff;
+    display:none;
+    background: #fab243;
+}
+.scrollup > a {
+    position:relative;
+    top:7px;
+    color:#fff;
+}
+/*
+4 Responsible
+********************************************************************/
+@media (max-width: 1550px) {
+    #home h1.title .desc { font-size: 1.25em; line-height: 1.2em; margin-top: 2.7em; }
+}
+@media (max-width: 1370px) {
+     #home h1.title { font-size: 21px;}
+}
+@media (max-width: 1250px) {
+    
+    #home h1.title { font-size: 18px;}
+    #home h1.title .desc {margin-top: 3.2em;}
+    #pricing .title.lato h1 { margin-top: 0.8em; }
+    
+    .reqs-text li { border-left: 1px solid #b5bec4; background: none; padding: 0 3%; }
+    .reqs-text li:first-child { border-left: 0; }
+    
+}
+
+@media (max-width: 1200px) {
+    .reqs-text li { padding: 0 2%; }
+    
+    .reqs-text li span { width: 60px; height: 48.2px; max-width: 60px; max-height: 48.2px; background-size: 60px; }
+    .reqs-text li.microphone span { background-position: 0 -48.2px; }
+    .reqs-text li.internet span { background-position: 0 -96.4px; }
+    .reqs-text li.payment span { background-position: 0 -144.6px; }
+    .reqs-text li.computer span { background-position: 0 -192.8px; }
+    
+    #why-tutio .container { width: 966px; }
+    .thumbnails { margin-left: 0;}
+    .teacher-tracking img { margin-left: 10%; }
+    .flexibility img {margin: 25% 18% 0 0; }
+    .live-tutor-interaction img { margin-left: 13%; }
+    .find-right-educator img { margin: 30% 14% 0 0; }
+    
+    .flexibility div { margin-top: 20%; }
+    
+}
+@media (max-width: 1110px) {
+    #home h1.title { font-size: 18px; width: 32%; left: 17.5%; }
+    #home h1.title .handlee { font-size: 5.5em; margin-top: 0.38em; }
+    #home h1.title .desc {margin-top: 2.8em;}
+    #home form.search-big { top: 69%;}
+    #home form.search-big input[type="search"]{ font-size: 18px;}
+    #home form.search-big input[type="submit"]{
+        background-size: 100%;
+        height: 45px;
+        width: 48.75px;
+    }
+    
+    .for-students { left: 0; }
+    .for-tutors { right: 0; }
+}
+@media (max-width: 1000px) {
+    .thumbnails { background-size: 900px; }
+    #why-tutio .container { width: 900px; }
+    .thumbnail img { width: 218px; }
+    
+    .flexibility div { margin-top: 15%; }
+    .flexibility img { margin-top: 18%; }
+    .live-tutor-interaction div { margin-top: 10%; }
+    .live-tutor-interaction img { margin-top: 13%; }
+}
+ @media (min-width: 1200px) {
+     .thumbnails, .thumbnails li {margin-left: 0; float: none;}
+    .thumbnail .more {
+        margin-left:-41px;
+        width:80px;
+        height:80px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        -khtml-border-radius: 40px;
+        line-height: 80px;
+    }
+}
+@media (max-width: 979px) {
+    body {
+        padding-left:0;
+        padding-right:0;
+    }
+    
+    .secondary-section#why-tutio p { margin-bottom: 10%; width: 100%}
+    #why-tutio .container { width: 724px; }
+    .thumbnails { background-size: 724px; }
+    .thumbnail img { width: 176px; }
+    .thumbnail .copy h3 { font-size: 1.8em; }
+    .thumbnail .copy h3 span { font-size: 0.7em; }
+    .secondary-section#why-tutio .thumbnail .copy p { font-size: 1em; width: 100%; padding-top: 5%; }
+    .flexibility div { margin-top: 8.5%; }
+    .find-right-educator div { margin-top: 22%;}
+    
+    #requirements .container { width: 100%; }
+    .reqs-text { font-size: 20px; }
+    
+    .navbar .btn { margin-top: 23px; }
+    .navbar form { width: 40%; }
+    #home form.search-big { width: 60%; left: 20%; }
+    #home h1.title { font-size: 15px; }
+    
+    #pricing.section { padding: 0; }
+    #pricing .span2 { width: 20%; margin-bottom: 50px; }
+    #pricing .row-fluid [class*="span"] {margin-left: 0%;}
+    
+    .navbar-fixed-top, .navbar-fixed-bottom {
+        position: fixed;
+    }
+    .navbar .nav > li > a {
+        line-height: 20px;
+        vertical-align: middle;
+    }
+    .section {
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .nav-collapse {
+        clear: both;
+    }
+    .nav-collapse .nav {
+        float: none;
+        margin: 0 0 10px;
+    }
+    .nav-collapse .nav > li {
+        float: none;
+    }
+    .nav-collapse, .nav-collapse.collapse {
+        width: 100%;
+        display: inherit;
+    }
+    .thumbnail .more {
+        margin-left:-21px;
+        width:40px;
+        height:40px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        -khtml-border-radius: 30px;
+        line-height: 40px;
+    }
+    .thumbnail:hover .more {
+        margin-top:-20px;
+    }
+}
+@media (max-width: 768px) {
+    
+    #home h1.title { width: 34.5%; }
+    #home h1.title .desc { margin-top: 1.3em; }
+    #why-tutio .container { width: auto; }
+    .thumbnails { background: none; }
+    .thumbnail img {
+        -webkit-border-radius: 40px !important;
+        -moz-border-radius: 40px !important;
+        border-radius: 40px !important;
+    }
+    .thumbnail .copy { width: 52%; }
+    .flexibility img, .find-right-educator img { margin-right: 10%;}
+    .live-tutor-interaction img { margin-left: 10%;}
+    
+    .find-right-educator div,
+    .flexibility div
+     { margin-top: 5%; }
+     .find-right-educator img { margin-top: 10%; }
+    
+    #how-it-works .primary-section { background-image: none; min-height: auto; }
+    .for-students {margin-top: 0; margin-left: 10%;}
+    .for-tutors {margin-right: 10%;}
+    
+    .section { padding-bottom: 20px;}
+    
+    #requirements.section { padding-bottom: 0; }
+    .reqs-text li { display: block; height: 222px; border-left: 0; height: auto; padding-bottom: 50px; }
+    .reqs-text li span { width: 82px; height: 66px; max-width: 82px; max-height: 66px; background-size: 82px; margin: 20px auto 20px; }
+    .reqs-text li.camera span { background-position: top left; }
+    .reqs-text li.microphone span { background-position: 0 -66px; }
+    .reqs-text li.internet span { background-position: 0 -132px; }
+    .reqs-text li.payment span { background-position: 0 -198px; }
+    .reqs-text li.computer span { background-position: 0 -264px; }
+    .reqs-text { font-size: 22px; }
+    
+    #pricing { max-height: none !important; }
+    .price-table { margin-top: 40px;}
+    #pricing .span2 { width: 50.5%; margin-left: auto; margin-right: auto;  }
+    #pricing .row-fluid [class*="span"] {margin: 0 auto 20px;}
+    
+    .primary-section .brand {float: none; margin: 0 auto; border-bottom: 1px solid white; padding-bottom: 10px; margin-bottom: 20px; }
+    .section .title h1 { text-align: center; }
+    .primary-section .title p { text-align: center; }
+    .navbar form { width: 60%; }
+    .info-mail {
+        width:90%;
+        padding:15px 0px;
+    }
+    .project-description {
+        padding-left:20px;
+    }
+    .price-column, .testimonial {
+        margin-top:30px;
+    }
+    
+    .footer div {
+        margin: 0 2%;
+    }
+}
+
+/* for Android */
+@media (max-width: 640px) {
+    #home form.search-big { width: 75%; left: 12.5%; top: 60%; }
+    #home form.search-big input[type="submit"] {right: -5px;}
+    #home h1.title { width: 60%; left: 5%; top: 13%; margin: 0; }
+    #home h1.title .online { font: 1.5em Handlee; letter-spacing: 0; margin: 0; padding: 0; text-transform: capitalize; display: inline; border: 0}
+    #home h1.title .handlee { font: 1.5em Handlee; margin-top: 0; margin: 0; display: inline; }
+    #home h1.title .desc { display: block; text-transform: lowercase; font: 400 1em Lato; margin-top: 0; line-height: 1.2em; margin: 0; font-style: italic; position: relative; top: -10px;}
+    .navbar-fixed-top {
+        min-height: 45px;
+        height: 45px;
+    }
+    .navbar-fixed-top .navbar-inner { padding-bottom: 10px; }
+    .navbar .brand { padding: 8px 0 0 2.5%; }
+    .navbar .brand img { width: 48px; height: 33.6px; }
+    .navbar form {
+        width: 50%;
+        left: 5%;
+        top: 10px;
+        margin-bottom: 0;
+    }
+    .navbar .btn { margin-top: 8px; }
+    
+    .for-students, .for-tutors {
+        float: none;
+        margin: 0 auto !important;
+        width: 80%;
+        padding-bottom: 10px;
+        margin-bottom: 30px !important;
+    }
+    #how-it-works .primary-section h3 {
+        font-size: 2em;
+        padding: 10px 0;
+    }
+    .for-students li, .for-tutors li { font-size: 1.1em; line-height: 1.5em; padding: 20px; background-size: 15px }
+    
+    #pricing.section .container { padding-top: 0; }
+}
+
+/* iPhone6 Landscape */
+@media (max-width: 667px) {
+    #home h1.title { width: 45%; left: 10%;}
+    #home h1.title .desc { margin-top: 0.5em; }
+    
+    .for-students { margin-left: 5%;}
+    .for-tutors { margin-right: 5%; }
+}
+
+/* iPhone 6+ Portrait */
+@media (max-width: 414px) {
+    #home h1.title { width: 55% !important; left: 7% !important; }
+}
+
+/* iPhone 6+ Landscape */
+@media (max-width: 736px) {
+    #home h1.title { width: 45%; left: 13%; }
+}
